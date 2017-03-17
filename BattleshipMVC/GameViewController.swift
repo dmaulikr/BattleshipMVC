@@ -9,7 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController{
-    private let _game: Game = Game()
+    private let _game: Game = Game(dictionary: [:])
     
     override func loadView() {
         view = GameView()
