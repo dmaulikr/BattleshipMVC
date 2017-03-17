@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Game {
+class Game{
     
     public enum Token{
         case none
@@ -47,6 +47,14 @@ class Game {
         if (_board[col][row] == .none){
             _board[col][row] = currentPlayerIsX ? .x : .o
         }
+    }
+    
+    public var dictionaryRepresentation: NSDictionary {
+        return ["Board":[]]
+    }
+    
+    public init(dictionary: NSDictionary){
+        // TODO: Assign to board property using values found in dictionary.
     }
     
 }
