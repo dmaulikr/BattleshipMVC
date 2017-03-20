@@ -14,12 +14,20 @@ class Game{
         case none
         case x
         case o
+        case b
     }
     
     private var _board: [[Token]] = [
-        [.none, .none, .none],
-        [.none, .none, .none],
-        [.none, .none, .none]]
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none],
+        [.none, .none, .none, .none, .none, .none, .none, .none, .none, .none]]
     
     public var board: [[Token]] {
         return _board
@@ -53,6 +61,19 @@ class Game{
         return ["Board":[]]
     }
     
+    public func setPiece(col: Int, row: Int, piece: NSString)
+    {
+        if (piece == "b"){
+            _board[col][row] = .b
+        }
+        else if (piece == "x"){
+            _board[col][row] = .x
+        }
+        else if (piece == "o"){
+            _board[col][row] = .o
+        }
+        
+    }
     public init(dictionary: NSDictionary){
         // TODO: Assign to board property using values found in dictionary.
     }

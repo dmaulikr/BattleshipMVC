@@ -17,6 +17,21 @@ class GameViewController: UIViewController{
     
     override func viewDidLoad() {
         view.backgroundColor = UIColor.red
+        _game.setPiece(col: 0, row: 0, piece: "b")
+        _game.setPiece(col: 0, row: 1, piece: "b")
+        _game.setPiece(col: 0, row: 2, piece: "b")
+        _game.setPiece(col: 0, row: 3, piece: "b")
+        
+        _game.setPiece(col: 5, row: 4, piece: "b")
+        _game.setPiece(col: 5, row: 5, piece: "b")
+        _game.setPiece(col: 5, row: 6, piece: "b")
+        
+        _game.setPiece(col: 3, row: 8, piece: "b")
+        _game.setPiece(col: 4, row: 8, piece: "b")
+        _game.setPiece(col: 5, row: 8, piece: "b")
+        _game.setPiece(col: 6, row: 8, piece: "b")
+        _game.setPiece(col: 7, row: 8, piece: "b")
+        
         refresh()
     }
     
@@ -37,10 +52,13 @@ class GameViewController: UIViewController{
                 case .none : viewTokens.append(" ")
                 case .x : viewTokens.append("X")
                 case .o : viewTokens.append("O")
+                case .b : viewTokens.append("B")
                 }
             }
         }
         gameView.tokens = viewTokens
         
     }
+    
+    
 }
